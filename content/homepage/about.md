@@ -1,9 +1,9 @@
 ---
-title: 'Our Difference'
+title: 'Interested?'
 weight: 2
-background: ''
-button: 'About Us'
-buttonLink: 'about'
+background: 'images/kevin-bhagat-461952-unsplash.jpg'
+button: 'Apply now!'
+buttonLink: 'https://tally.so/r/m68JLe'
 ---
 
-Lorem ipsum dolor sit amet, et essent mediocritatem quo, choro volumus oporteat an mei. ipsum dolor sit amet, et essent mediocritatem quo,
+If you are a new DAO or a founder thinking of starting a DAO - using software and community to solve problems - then apply now!

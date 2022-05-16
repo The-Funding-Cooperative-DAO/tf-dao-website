@@ -1,8 +1,0 @@
-module:
-  module.hugoVersion:
-    min: "0.98.0"
-    extended: true
-
-  imports:
-    # - path: "gitlab.com/writeonlyhugo/hugo-module-bootstrap"
-    # - path: "gitlab.com/writeonlyhugo/hugo-module-bootstrap-icons"
