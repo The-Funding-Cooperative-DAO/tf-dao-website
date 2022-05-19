@@ -1,7 +1,7 @@
 ---
 title: 'Mission Statement'
-weight: 1
-background: 'images/kevin-bhagat-461952-unsplash.jpg'
+weight: 2
+background: '/uploads/grape.png'
 ---
 
 Build a community-owned public good for the radically inclusive funding of all qualified innovators.

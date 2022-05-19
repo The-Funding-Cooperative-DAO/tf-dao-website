@@ -1,7 +1,7 @@
 ---
 title: 'Interested?'
-weight: 2
-background: 'images/kevin-bhagat-461952-unsplash.jpg'
+weight: 3
+background: '/uploads/14.png'
 button: 'Apply now!'
 buttonLink: 'https://tally.so/r/m68JLe'
 ---

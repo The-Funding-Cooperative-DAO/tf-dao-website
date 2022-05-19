@@ -1,12 +1,12 @@
 [
     {
-        "name": "Github",
-        "link": "https://github.com/zerostaticthemes/hugo-serif-theme",
-        "image": "social/github.svg"
+        "name": "Discord",
+        "link": "https://discord.gg/vUGcJrqh3Q",
+        "image": "social/discord.svg"
     },
     {
-        "name": "Twitter",
-        "link": "https://twitter.com/zerostaticio",
-        "image": "social/twitter.svg"
+        "name": "Gitbook",
+        "link": "https://the-funding-cooperative-dao.gitbook.io/welcome/",
+        "image": "social/git.svg"
     }
 ]

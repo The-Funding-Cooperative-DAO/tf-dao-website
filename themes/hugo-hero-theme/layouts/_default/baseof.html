@@ -19,6 +19,8 @@
 
   {{ block "header_css" . }}{{ end }}
 
+  {{ $uploads := resources.Match "uploads/*" }}
+  {{ range $uploads }} {{ .Publish }} {{ end }}
 </head>
 
 <body class='page {{ block "body_classes" . }}{{ end }}'>
