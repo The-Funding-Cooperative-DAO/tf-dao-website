@@ -2,11 +2,11 @@
   {
     "name": "Discord",
     "link": "https://discord.gg/vUGcJrqh3Q",
-    "image": "social/discord.svg"
+    "image": "/uploads/discord.svg"
   },
   {
     "name": "Gitbook",
     "link": "https://the-funding-cooperative-dao.gitbook.io/welcome/",
-    "image": "social/git.svg"
+    "image": "/uploads/git.svg"
   }
 ]
