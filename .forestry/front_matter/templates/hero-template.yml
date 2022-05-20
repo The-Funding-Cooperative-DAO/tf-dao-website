@@ -1,0 +1,19 @@
+---
+label: Hero Template
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: heroHeading
+  label: heroHeading
+- type: text
+  name: heroSubHeading
+  label: heroSubHeading
+- type: file
+  name: heroBackground
+  label: heroBackground
