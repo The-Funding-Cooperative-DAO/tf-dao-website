@@ -4,25 +4,33 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: heading
+  label: Home
+- type: document
+  path: content/_index.md
+  label: Hero
+  match: "**/*"
+- type: document
+  path: content/homepage/video.md
+  label: Video
+  match: "**/*"
+- type: document
+  path: content/homepage/mission.md
+  label: Mission
+  match: "**/*"
+- type: document
+  path: content/services/_index.md
+  label: Services Section Title
+  match: "**/*"
 - type: directory
-  path: content
-  label: Pages
-  create: all
+  path: content/dervices
+  label: Services Section Content
+  create: documents
   match: "*"
-- type: directory
-  path: content/services
-  label: Services
-  create: all
-  match: "**/*"
-- type: directory
-  path: content/homepage
-  label: Homepage
-  create: all
-  match: "**/*"
-- type: directory
-  path: content/404
-  label: '404'
-  create: all
+  exclude: _index.md
+- type: document
+  path: content/comepage/about.md
+  label: CTA
   match: "**/*"
 upload_dir: assets/uploads
 public_path: "/uploads"
