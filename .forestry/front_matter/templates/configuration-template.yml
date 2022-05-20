@@ -5,15 +5,19 @@ fields:
 - type: text
   name: baseURL
   label: baseURL
+  description: The URL of the website.
 - type: text
   name: languageCode
   label: languageCode
+  hidden: true
 - type: text
   name: title
-  label: title
+  label: Title
+  description: Title of the website.
 - type: text
   name: theme
   label: theme
+  hidden: true
 - type: field_group
   name: module
   label: module
@@ -25,89 +29,93 @@ fields:
     - type: boolean
       name: extended
       label: extended
+      hidden: true
     - type: text
       name: min
       label: min
+      hidden: true
+    hidden: true
+  hidden: true
 - type: field_group
   name: params
   label: params
   fields:
   - type: text
     name: google_analytics_id
-    label: google_analytics_id
+    label: Google Analytics ID
   - type: field_group
     name: logo
-    label: logo
+    label: Logo
     fields:
     - type: file
       name: mobile
-      label: mobile
+      label: Mobile Logo
     - type: text
       name: mobile_height
-      label: mobile_height
+      label: Mobile Logo Height
     - type: text
       name: mobile_width
-      label: mobile_width
+      label: Mobile Logo Width
     - type: file
       name: desktop
-      label: desktop
+      label: Desktop Logo
     - type: text
       name: desktop_height
-      label: desktop_height
+      label: Desktop Logo Height
     - type: text
       name: desktop_width
-      label: desktop_width
+      label: Desktop Logo Width
     - type: text
       name: alt
-      label: alt
+      label: Logo Description
   - type: field_group
     name: homepage_meta_tags
-    label: homepage_meta_tags
+    label: Homepage Meta Tags
     fields:
     - type: text
       name: meta_description
-      label: meta_description
+      label: Meta Description
     - type: text
       name: meta_og_title
-      label: meta_og_title
+      label: Meta OG Title
     - type: text
       name: meta_og_type
-      label: meta_og_type
+      label: Meta OG Type
     - type: text
       name: meta_og_url
-      label: meta_og_url
+      label: Meta OG URL
     - type: text
       name: meta_og_image
-      label: meta_og_image
+      label: Meta OG Image
     - type: text
       name: meta_og_description
-      label: meta_og_description
+      label: Meta OG Description
     - type: text
       name: meta_twitter_card
-      label: meta_twitter_card
+      label: Meta Twitter Card
     - type: text
       name: meta_twitter_site
-      label: meta_twitter_site
+      label: Meta Twitter Site
     - type: text
       name: meta_twitter_creator
-      label: meta_twitter_creator
+      label: Meta Twitter Creator
 - type: field_group
   name: menu
-  label: menu
+  label: Menu
   fields:
   - type: field_group_list
     name: main
-    label: main
+    label: Main
     fields:
     - type: text
       name: name
-      label: name
+      label: Name
     - type: text
       name: url
-      label: url
+      label: URL
     - type: number
       name: weight
-      label: weight
+      label: Weight
 - type: field_group
   name: permalinks
   label: permalinks
@@ -115,6 +123,9 @@ fields:
   - type: text
     name: post
     label: post
+    hidden: true
   - type: text
     name: pages
     label: pages
+    hidden: true
+  hidden: true
