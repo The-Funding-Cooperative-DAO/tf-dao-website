@@ -79,9 +79,10 @@
     {{ range first 6 $services.RegularPages }}
     <div class="col-12 col-md-4 mb-1">
       <div class="service service-summary">
-        {{ if .Params.icon }}
-        <div class="service-image">
-          <img height="80" width="80" src="{{ .Params.icon | relURL }}" alt="{{ .Title }}" />
+        {{ with .Params.icon }}
+        <div class="service-image text-primary svg-2">
+          {{ $icon := resources.Get ( printf "bootstrap-icons/%s.svg" . ) }}
+          {{ if $icon }}{{ $icon.Content | safeHTML }}{{ end }}
         </div>
         {{ end }}
         <div class="service-content">
