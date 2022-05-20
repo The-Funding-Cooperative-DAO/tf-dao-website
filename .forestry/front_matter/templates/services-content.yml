@@ -4,13 +4,15 @@ hide_body: true
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
 - type: text
   name: icon
-  label: icon
+  label: Icon
+  description: 'See options at: icons.getbootstrap.com'
 - type: textarea
   name: summary
-  label: summary
+  label: Summary
 - type: number
   name: weight
-  label: weight
+  label: Weight
+  description: Controls the order in which the item is shown.
