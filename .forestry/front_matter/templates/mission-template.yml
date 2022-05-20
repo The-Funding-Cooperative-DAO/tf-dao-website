@@ -4,20 +4,24 @@ hide_body: true
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
 - type: number
   name: weight
   label: weight
+  hidden: true
 - type: file
   name: background
-  label: background
+  label: Background
 - type: field_group_list
   name: items
-  label: items
+  label: Items
   fields:
   - type: text
     name: icon
-    label: icon
+    label: Icon
+    description: 'See options here: icons.getbootstrap.com'
   - type: text
     name: text
-    label: text
+    label: Text
+pages:
+- content/homepage/mission.md
