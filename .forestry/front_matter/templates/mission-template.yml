@@ -1,0 +1,23 @@
+---
+label: Mission Template
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: number
+  name: weight
+  label: weight
+- type: file
+  name: background
+  label: background
+- type: field_group_list
+  name: items
+  label: items
+  fields:
+  - type: text
+    name: icon
+    label: icon
+  - type: text
+    name: text
+    label: text
