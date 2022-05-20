@@ -1,3 +1,4 @@
 ---
-title: 'Why Funding Cooperative DAO'
+title: Why Funding Cooperative DAO
+
 ---
