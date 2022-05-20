@@ -24,6 +24,8 @@ sections:
   create: documents
   match: "*"
   exclude: _index.md
+  templates:
+  - services-content
 - type: document
   path: content/comepage/about.md
   label: CTA
