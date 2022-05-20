@@ -25,11 +25,7 @@
 
 {{ range first 1 $reusablePages }}
 <div id="home" class="strip bg-cover bg-position-top bg-secondary bg-overlay" style='background-image: url("{{ .Params.background | relURL }}");'>
-  <div class="container py-4">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-10 text-center text-white">
-        <h2 class="display-1 font-weight-bold text-uppercase mb-3 text-primary">{{ .Title }}</h2>
-        <div class="video-container mb-3">
+        <div class="video-container">
           {{ with .Params.youtube }}
             <iframe class="video rounded" src="{{ printf "https://www.youtube.com/embed/%s?controls=0" . }}" title="YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           {{ end }}
@@ -40,10 +36,6 @@
             </video>
           {{ end }}
         </div>
-        <div class="text-white">{{ .Content }}</div>
-      </div>
-    </div>
-  </div>
 </div>
 {{ end }}
 
@@ -52,7 +44,20 @@
   <div class="container pt-17 pb-17">
     <div class="row">
       <div class="col-12 col-md-6 offset-md-6">
-        <h2 class="text-primary text-capitalize">{{ .Title }}</h2>
+        <h2 class="text-primary text-capitalize text-center mb-3">{{ .Title }}</h2>
+        <div class="text-light">
+          {{ range .Params.items }}
+            <div class="d-flex flex-column mb-3 justify-content-center align-items-center text-center">
+              <div class="d-flex align-items-center mb-1 svg-2">
+                {{ with .icon }}
+                  {{ $icon := resources.Get ( printf "bootstrap-icons/%s.svg" . ) }}
+                  {{ $icon.Content | safeHTML }}
+                {{ end }}
+              </div>
+              <div class="d-flex align-items-center lead"> {{ .text }} </div>
+            </div>
+          {{ end }}
+        </div>
         <div>{{ .Content }}</div>
         {{ if .Params.button }}
         <a class="button" href="{{ .Params.buttonLink | relURL }}">{{ .Params.button }}</a>
@@ -64,20 +69,38 @@
 {{ end }}
 
 
-{{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
-{{if gt (len $services) 0}}
+{{ $services := site.GetPage "/services" }}
+{{ if $services.RegularPages }}
 <div class="container pt-8 pb-8 pb-md-14 pt-md-14">
   <div class="row justify-content-start">
     <div class="col-12">
-      <h2 class="text-center mb-3">Our Services</h2>
+      <h2 class="text-center mb-5">{{ $services.Title }}</h2>
     </div>
-    {{ range first 6 (sort $services ".Params.weight") }}
+    {{ range first 6 $services.RegularPages }}
     <div class="col-12 col-md-4 mb-1">
-      {{ .Render "summary" }}
+      <div class="service service-summary">
+        {{ if .Params.icon }}
+        <div class="service-image">
+          <img height="80" width="80" src="{{ .Params.icon | relURL }}" alt="{{ .Title }}" />
+        </div>
+        {{ end }}
+        <div class="service-content">
+          <h2 class="service-title">
+            {{ if .Params.link }}
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ else }}
+              <span class="text-primary">{{ .Title }}</span>
+            {{ end }}
+          </h2>
+          {{ .Summary }}
+        </div>
+      </div>
     </div>
     {{ end }}
     <div class="col-12 text-center">
-      <a class="button button-primary" href="{{ .Site.BaseURL }}services">View All Services</a>
+      {{ with .Params.button }}
+        <a class="button button-primary" href="{{ .Site.BaseURL }}services">View All Services</a>
+      {{ end }}
     </div>
   </div>
 </div>
