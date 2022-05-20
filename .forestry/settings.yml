@@ -17,10 +17,10 @@ sections:
   label: Mission
 - type: document
   path: content/services/_index.md
-  label: Services Section Title
+  label: Services Title
 - type: directory
-  path: content/dervices
-  label: Services Section Content
+  path: content/services
+  label: Services Content
   create: documents
   match: "*"
   exclude: _index.md
