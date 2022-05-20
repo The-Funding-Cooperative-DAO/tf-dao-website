@@ -11,3 +11,5 @@ fields:
 - type: file
   name: heroBackground
   label: Background
+pages:
+- content/_index.md
