@@ -1,46 +1,38 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "The Funding Cooperative"
 theme = "hugo-hero-theme"
-
-[module]
-  [module.hugoVersion]
-    extended = true
-    min = "0.92.0"
-    
+title = "The Funding Cooperative"
+[[menu.main]]
+name = "Community"
+url = "https://discord.gg/HPcEWvGGvm"
+weight = 2
+[[menu.main]]
+name = "About"
+url = "https://the-funding-cooperative-dao.gitbook.io/welcome/"
+weight = 1
+[module.hugoVersion]
+extended = true
+min = "0.92.0"
 [params]
-  google_analytics_id=""
-
-  [params.logo]
-    mobile = "uploads/tfc-dao-logo.png"
-    mobile_height = "29px"
-    mobile_width = "217px"
-    desktop = "uploads/tfc-dao-logo.png"
-    desktop_height = "29px"
-    desktop_width = "217px"
-    alt = "The Funding Cooperative"
-
-  [params.homepage_meta_tags]
-    meta_description = "Growing communities of DAOs via indexing, outreach, & education"
-    meta_og_title = "The Funding Cooperative"
-    meta_og_type = "website"
-    meta_og_url = ""
-    meta_og_image = ""
-    meta_og_description = "Growing communities of DAOs via indexing, outreach, & education"
-    meta_twitter_card = "summary"
-    meta_twitter_site = ""
-    meta_twitter_creator = ""
-
-[[menu.main]]
-	name = "About"
-	url = "https://the-funding-cooperative-dao.gitbook.io/welcome/"
-  weight = 1
-
-[[menu.main]]
-  name = "Community"
-  url = "https://discord.gg/vUGcJrqh3Q"
-  weight = 2
-
+google_analytics_id = ""
+[params.homepage_meta_tags]
+meta_description = "Growing communities of DAOs via indexing, outreach, & education"
+meta_og_description = "Growing communities of DAOs via indexing, outreach, & education"
+meta_og_image = ""
+meta_og_title = "The Funding Cooperative"
+meta_og_type = "website"
+meta_og_url = ""
+meta_twitter_card = "summary"
+meta_twitter_creator = ""
+meta_twitter_site = ""
+[params.logo]
+alt = "The Funding Cooperative"
+desktop = "uploads/tfc-dao-logo.png"
+desktop_height = "29px"
+desktop_width = "217px"
+mobile = "uploads/tfc-dao-logo.png"
+mobile_height = "29px"
+mobile_width = "217px"
 [permalinks]
-  post = "/:year/:month/:day/:slug/"
-  pages = "/:filename/"
+pages = "/:filename/"
+post = "/:year/:month/:day/:slug/"
